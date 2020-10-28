@@ -1,0 +1,127 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{ctexart}
+% \documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{url}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usetikzlibrary{automata,positioning}
+\usetikzlibrary{shapes,arrows}
+\newCJKfontfamily\gothic{IPAexGothic}
+\newCJKfontfamily\mincho{IPAexMincho}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+\chead{\textbf{\hmwkClass}}
+\rhead{\hmwkClassInstructor}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+
+% \newcommand{\hmwkTitle}{JPL星表}
+% \newcommand{\hmwkDueDate}{2020年6月28日}
+\newcommand{\hmwkClass}{外出申请说明}
+% \newcommand{\hmwkClassTime}{}
+\newcommand{\hmwkClassInstructor}{}
+\newcommand{\hmwkAuthorNameCover}{2020年9月}
+\newcommand{\hmwkAuthorName}{}
+
+%
+% Title Page
+%
+
+\title{
+    \begin{center}
+      \includegraphics[scale=0.2]{BNU_name.png}
+    \end{center}
+    \vspace{2.5in}
+    \Huge{\textbf{\hmwkClass}}\\
+    % \vspace{0.1in} \large{\textbf{\hmwkDueDate}} \\
+    \vspace{1in}
+}
+\author{\textbf{\hmwkAuthorNameCover}}
+\date{}
+
+% Useful for algorithms
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}
+
+% For derivatives
+% \newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
+\newcommand{\derivt}[1]{\frac{\mathrm{d}}{\mathrm{d}t} (#1)}
+\newcommand{\Derivt}[1]{\frac{\mathrm{D}}{\mathrm{D}t} (#1)}
+\newcommand{\derivo}[2]{\frac{\mathrm{d} #1 }{\mathrm{d} #2}}
+\newcommand{\derivp}[2]{\frac{\partial #1}{\partial #2}}
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #2} (#1)}
+
+\newcommand{\bral}[1]{\left( #1 \right)}
+\newcommand{\bram}[1]{\left[ #1 \right]}
+\newcommand{\brab}[1]{\left{ #1 \right}}
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+\renewcommand{\QQQ}[1]{\\ \textbf{\large Question \large{#1} \\}}
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+\newcommand{\Const}{\mathrm{C}}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+% \newommand{\E}{\mathrm{E}}
+% \newcommand{\Var}{\mathrm{Var}}
+% \newcommand{\Cov}{\mathrm{Cov}}
+% \newcommand{\Bias}{\mathrm{Bias}}
+
+
+
+\begin{document}
+
+\maketitle
+\pagebreak
+
+\begin{center}
+  \huge{\textmd{\textbf{\hmwkClass}}}\\
+\end{center}
+\\
+\par \textbf{外出申请人：}北京外国语大学欧洲语言文化学院19级本科生太茸\\
+\par \textbf{外出时间：}2020年9月20日，当日返校\\
+\par \textbf{外出地点：}成府路20-3号自习室，中国地质大学附近\\
+\par \textbf{外出事由：}数学补习及学期学习计划之设计\\
+\par \textbf{主要接触人群：}海淀区居民\\
+\par \textbf{说明：}
+\par \par 尊敬的老师您好！我是太茸的数学一对一辅导老师，目前为北京师范大学在校学生，太茸同学有意跨专业考研，数学以及以数学为基础的学科作为考研的必考科目，需要提前准备。为了知识扎实稳固，学习高效，太茸同学在今年暑假末，特请我担任其数学学科的辅导老师。此次外出的目的是在最高效的情况下，给太茸同学制定合适的学习计划，并作课程的简要介绍。太茸同学有高中理科基础，学习微积分（高等数学）课程是没有障碍的，但这必须在紧跟课程以及辅导学习的情况下。
+\par \par 经前期的谈话了解到，太茸同学大三学年需要出国交流学习一年，因此太茸同学大二学年的任务比较繁重，需要提前进行规划。数学等理科的学习需要正确的学习方法和时间积累，数学作为其他学科的工具，其重要性是贯穿整个学习过程的，而在太茸同学跨专业学习的情况下，如果没有正确的方向往往会事倍功半，对于研究生考试是不利的。
+\par \par 此次辅导费和场地费太茸同学已经提前支付了，如果未能来上课将会造成一定的麻烦
+\par \par 北京外国语大学重视学生学业发展世人可鉴，为对太茸同学的学业生涯的发展负责，烦请老师考虑太茸同学的出校申请！
+\par \par 顺颂秋祺！
+
+\end{document}
