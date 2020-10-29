@@ -191,39 +191,17 @@ K=-\frac{k}{a^{2}} \tag{1.1.4}
 \]
 \textbf{Non-Zero Components of Christoffel Symbols:}
 \begin{align*}
-\csg{0}{11} &= \csge{0}{1}{1}\\
-            &= \quad -\frac{1}{2}\g^{00}\g_{11,0}
-            = \frac{1}{c^{2}}\frac{a\Dot{a}}{1-Kr^{2}}\tag{1.2.2}\\
-\csg{0}{22} &= \csge{0}{2}{2}\\
-            &= -\frac{1}{2}\g^{00}\g_{22,0}
-            = \frac{1}{c^{2}}a\Dot{a}r^{2}\tag{1.2.3}\\
-\csg{0}{33} &= \csge{0}{3}{3} \\
-            &= -\frac{1}{2}\g^{00}\g_{33,0}
-            = \frac{1}{c^{2}}a\Dot{a}r^{2}\sin^{2}\theta\tag{1.2.4}\\
-\csg{i}{j0} &= \csge{i}{j}{0} \\
-            &= \frac{1}{2}\g^{ii}\g_{ij,0}
-            = \frac{\Dot{a}}{a}\delta^{i}_{j}\tag{1.2.5}\\
-\csg{1}{11} &= \csge{1}{1}{1} \\
-            &= \frac{1}{2}\g^{11}\g_{11,1}
-            = \frac{Kr}{1-Kr^{2}}\tag{1.2.6}\\
-\csg{1}{22} &= \csge{1}{2}{2} \\
-            &= -\frac{1}{2}\g^{11}\g_{22,1}
-            = -r(1-Kr^{2}) \tag{1.2.7}\\   
-\csg{1}{33} &= \csge{1}{3}{3} \\
-            &= -\frac{1}{2}\g^{11}\g_{33,1}
-            = -r\sin^{2}\theta(1-Kr^{2}) \tag{1.2.8}\\  
-\csg{2}{12} &=  \csge{2}{1}{2}\\
-            &= \frac{1}{2}\g^{22}\g_{22,1}
-            = \frac{1}{r} \tag{1.2.9}\\
-\csg{3}{13} &= \csge{3}{1}{3} \\
-            &= \frac{1}{2}\g^{33}\g_{33,1}
-            = \frac{1}{r}  \tag{1.2.10}\\ 
-\csg{3}{23} &= \csge{3}{2}{3} \\
-            &= \frac{1}{2}\g^{33}\g_{33,2}
-            = -\sin \theta \cos \theta  \tag{1.2.11}\\
-\csg{2}{33} &= \csge{2}{3}{3} \\
-            &= \frac{1}{2}\g^{22}\g_{33,2}
-            = \cot \theta  \tag{1.2.12}
+\csg{0}{11} &= \csge{0}{1}{1}&= -\frac{1}{2}\g^{00}\g_{11,0}&=& \frac{1}{c^{2}}\frac{a\Dot{a}}{1-Kr^{2}}\tag{1.2.2}\\
+\csg{0}{22} &= \csge{0}{2}{2}&= -\frac{1}{2}\g^{00}\g_{22,0}&=& \frac{1}{c^{2}}a\Dot{a}r^{2}\tag{1.2.3}\\
+\csg{0}{33} &= \csge{0}{3}{3}&= -\frac{1}{2}\g^{00}\g_{33,0}&=& \frac{1}{c^{2}}a\Dot{a}r^{2}\sin^{2}\theta\tag{1.2.4}\\
+\csg{i}{j0} &= \csge{i}{j}{0}  &= \frac{1}{2}\g^{ii}\g_{ij,0}&=& \frac{\Dot{a}}{a}\delta^{i}_{j}\tag{1.2.5}\\
+\csg{1}{11} &= \csge{1}{1}{1}  &= \frac{1}{2}\g^{11}\g_{11,1}&=& \frac{Kr}{1-Kr^{2}}\tag{1.2.6}\\
+\csg{1}{22} &= \csge{1}{2}{2} &= -\frac{1}{2}\g^{11}\g_{22,1}&=& -r(1-Kr^{2}) \tag{1.2.7}\\   
+\csg{1}{33} &= \csge{1}{3}{3} &= -\frac{1}{2}\g^{11}\g_{33,1}&=& -r\sin^{2}\theta(1-Kr^{2}) \tag{1.2.8}\\  
+\csg{2}{12} &=  \csge{2}{1}{2} &= \frac{1}{2}\g^{22}\g_{22,1}&=& \frac{1}{r} \tag{1.2.9}\\
+\csg{3}{13} &= \csge{3}{1}{3}  &= \frac{1}{2}\g^{33}\g_{33,1}&=& \frac{1}{r}  \tag{1.2.10}\\ 
+\csg{3}{23} &= \csge{3}{2}{3}  &= \frac{1}{2}\g^{33}\g_{33,2}&=& -\sin \theta \cos \theta  \tag{1.2.11}\\
+\csg{2}{33} &= \csge{2}{3}{3}  &= \frac{1}{2}\g^{22}\g_{33,2}&= &\cot \theta  \tag{1.2.12}
 \end{align*}
 
 for\(i,j=1,2,3\)
@@ -340,7 +318,7 @@ z_{eq}&=\frac{a_{0}}{a_{eq}}-1 \approx 3.57 \times 10^{4}\tag{1.5.4}\\
 \end{align*}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{R2M_Eralog.png}
+\includegraphics[scale=1]{Era_rmL.png}
 \caption{\textbf{The evolution of matter density and radiation density over time}}
 \end{figure}
 
@@ -353,7 +331,7 @@ z_{eq}&=\frac{a_{0}}{a_{eq}}-1 \approx 3.57 \times 10^{4}\tag{1.5.4}\\
     a_{c}&=\displaystyle(\frac{\Omega_{m,0}}{2\Omega_{\Lambda}})^{1/3} \approx 0.598 \tag{1.5.7}\\
     z_{c}&=\frac{a_{0}}{a_{c}}-1\approx 0.671 \tag{1.5.8}\\
      t_{c}&=\frac{1}{H_{0}}\int^{\infty}_{z_{c}}\displaystyle\frac{dz}{(1+z)E(z)^{1/2}}\\
-      &\approx 96.8 \mathrm{G} yr\tag{1.5.9}
+      &\approx 7.54 \mathrm{G} yr\tag{1.5.9}
 \end{align*}
 \subsection{Big Bang Existence Criterion\cite{GRAIfPh1}}
 \quad\\
