@@ -11,10 +11,9 @@ matplotlib.rcParams['mathtext.fontset'] = 'cm'
 def main():
 	# a2tEuler()
 	# Era()
-	# Universes()
-	tt = cosmo_time(a_t=(Omg.m0/Omg.L0/2)**(1/3))
-	print(tt)
-
+	Universes()
+	# tt = cosmo_time(a_t=(Omg.m0/Omg.L0/2)**(1/3))
+	# print(tt)
 class Omg(object):
 	m0 = 0.3
 	L0 = 0.7
@@ -155,8 +154,8 @@ def Universes(Or0=8.4e-5,Om0=0.3,OL0=0.7,Ok0=0,H0=1/14.38,nside=2048):
 	ax1.set_ylim(-1,2)
 	axx.set_xlim(0,2)
 	axy.set_ylim(-1,2)
-	ax1.set_xlabel(r'$\Omega_{m}$',fontsize=12)
-	ax1.set_ylabel(r'$\Omega_{\Lambda}$',fontsize=12)
+	ax1.set_xlabel(r'$\Omega_{m,0}$',fontsize=12)
+	ax1.set_ylabel(r'$\Omega_{\Lambda,0}$',fontsize=12)
 	ax1.grid(False)
 
 
