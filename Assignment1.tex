@@ -113,10 +113,10 @@
 
 % \newcommand{\hmwkTitle}{000}
 % \newcommand{\hmwkDueDate}{2020年9月20日}
-\newcommand{\hmwkClass}{Dark Energy Theorem and Observation}
+\newcommand{\hmwkClass}{暗能量理论与观测}
 % \newcommand{\hmwkClassTime}{}
-\newcommand{\hmwkClassInstructor}{Wang Zhengyi}
-\newcommand{\hmwkAuthorNameCover}{Wang Zhengyi 201711160128}
+\newcommand{\hmwkClassInstructor}{王正一}
+\newcommand{\hmwkAuthorNameCover}{王正一 201711160128}
 \newcommand{\hmwkAuthorName}{BNU-DOA}
 
 
@@ -139,24 +139,26 @@
 \begin{document}
 \maketitle
 \pagebreak
+\tableofcontents
+\pagebreak
+\setcounter{page}{1}
+\section{暗能量理论}
 
-\section{Dark Energy Theorem}
-
-\subsection{FRLW Metric}
+\subsection{FRLW度规}
 \quad\\
-\textbf{For a 3-D hyper-sphere,the distance between two points of space is:}
+\textbf{在一个三维的超球面上，空间中两点距离为：}
 \[
 ds^{2} = f(r)dr^{2}+r^{2}d\theta +r^{2}\sin^{2}\theta\tag{1.1.1}
 \]
-\textbf{Gaussian Curvature:}
+\textbf{Gauss曲率:}
 \[
 k=\frac{1}{2f^{2}(r)r}\derivo{f(r)}{r}\tag{1.1.2}
 \]
-\textbf{Solution:}
+\textbf{得:}
 \[
 f(r)=\frac{1}{C-kr^{2}} \tag{1.1.3}
 \]
-\textbf{Let C=1,and introduce cosmological scale :}
+\textbf{令 $C=1$,引入宇宙尺度因子}
 \[
 K=-\frac{k}{a^{2}} \tag{1.1.4}
 \]
@@ -183,56 +185,34 @@ K=-\frac{k}{a^{2}} \tag{1.1.4}
 \g_{33,0} = 2a\dot{a}r^{2}\sin^{2}\theta,\quad\g_{33,1}=2a^{2}&r\sin^{2}\theta,\quad\g_{33,2}=2a^{2}r\sin^{2},\quad\g_{33,3} =0\tag{1.1.12}\\
 \end{align*}
 
-\subsection{Christoffel Symbols}
+\subsection{Christoffel符号}
 \quad\\
 
 \[
 \csg{\sigma}{\mu\nu}=\csge{\sigma}{\mu}{\nu}\tag{1.2.1}
 \]
-\textbf{Non-Zero Components of Christoffel Symbols:}
+\textbf{Christoffel符号非零分量:}
 \begin{align*}
-\csg{0}{11} &= \csge{0}{1}{1}\\
-            &= \quad -\frac{1}{2}\g^{00}\g_{11,0}
-            = \frac{1}{c^{2}}\frac{a\Dot{a}}{1-Kr^{2}}\tag{1.2.2}\\
-\csg{0}{22} &= \csge{0}{2}{2}\\
-            &= -\frac{1}{2}\g^{00}\g_{22,0}
-            = \frac{1}{c^{2}}a\Dot{a}r^{2}\tag{1.2.3}\\
-\csg{0}{33} &= \csge{0}{3}{3} \\
-            &= -\frac{1}{2}\g^{00}\g_{33,0}
-            = \frac{1}{c^{2}}a\Dot{a}r^{2}\sin^{2}\theta\tag{1.2.4}\\
-\csg{i}{j0} &= \csge{i}{j}{0} \\
-            &= \frac{1}{2}\g^{ii}\g_{ij,0}
-            = \frac{\Dot{a}}{a}\delta^{i}_{j}\tag{1.2.5}\\
-\csg{1}{11} &= \csge{1}{1}{1} \\
-            &= \frac{1}{2}\g^{11}\g_{11,1}
-            = \frac{Kr}{1-Kr^{2}}\tag{1.2.6}\\
-\csg{1}{22} &= \csge{1}{2}{2} \\
-            &= -\frac{1}{2}\g^{11}\g_{22,1}
-            = -r(1-Kr^{2}) \tag{1.2.7}\\   
-\csg{1}{33} &= \csge{1}{3}{3} \\
-            &= -\frac{1}{2}\g^{11}\g_{33,1}
-            = -r\sin^{2}\theta(1-Kr^{2}) \tag{1.2.8}\\  
-\csg{2}{12} &=  \csge{2}{1}{2}\\
-            &= \frac{1}{2}\g^{22}\g_{22,1}
-            = \frac{1}{r} \tag{1.2.9}\\
-\csg{3}{13} &= \csge{3}{1}{3} \\
-            &= \frac{1}{2}\g^{33}\g_{33,1}
-            = \frac{1}{r}  \tag{1.2.10}\\ 
-\csg{3}{23} &= \csge{3}{2}{3} \\
-            &= \frac{1}{2}\g^{33}\g_{33,2}
-            = -\sin \theta \cos \theta  \tag{1.2.11}\\
-\csg{2}{33} &= \csge{2}{3}{3} \\
-            &= \frac{1}{2}\g^{22}\g_{33,2}
-            = \cot \theta  \tag{1.2.12}
+\csg{0}{11} &= \csge{0}{1}{1}&= -\frac{1}{2}\g^{00}\g_{11,0}&=& \frac{1}{c^{2}}\frac{a\Dot{a}}{1-Kr^{2}}\tag{1.2.2}\\
+\csg{0}{22} &= \csge{0}{2}{2}&= -\frac{1}{2}\g^{00}\g_{22,0}&=& \frac{1}{c^{2}}a\Dot{a}r^{2}\tag{1.2.3}\\
+\csg{0}{33} &= \csge{0}{3}{3}&= -\frac{1}{2}\g^{00}\g_{33,0}&=& \frac{1}{c^{2}}a\Dot{a}r^{2}\sin^{2}\theta\tag{1.2.4}\\
+\csg{i}{j0} &= \csge{i}{j}{0}  &= \frac{1}{2}\g^{ii}\g_{ij,0}&=& \frac{\Dot{a}}{a}\delta^{i}_{j}\tag{1.2.5}\\
+\csg{1}{11} &= \csge{1}{1}{1}  &= \frac{1}{2}\g^{11}\g_{11,1}&=& \frac{Kr}{1-Kr^{2}}\tag{1.2.6}\\
+\csg{1}{22} &= \csge{1}{2}{2} &= -\frac{1}{2}\g^{11}\g_{22,1}&=& -r(1-Kr^{2}) \tag{1.2.7}\\   
+\csg{1}{33} &= \csge{1}{3}{3} &= -\frac{1}{2}\g^{11}\g_{33,1}&=& -r\sin^{2}\theta(1-Kr^{2}) \tag{1.2.8}\\  
+\csg{2}{12} &=  \csge{2}{1}{2} &= \frac{1}{2}\g^{22}\g_{22,1}&=& \frac{1}{r} \tag{1.2.9}\\
+\csg{3}{13} &= \csge{3}{1}{3}  &= \frac{1}{2}\g^{33}\g_{33,1}&=& \frac{1}{r}  \tag{1.2.10}\\ 
+\csg{3}{23} &= \csge{3}{2}{3}  &= \frac{1}{2}\g^{33}\g_{33,2}&=& -\sin \theta \cos \theta  \tag{1.2.11}\\
+\csg{2}{33} &= \csge{2}{3}{3}  &= \frac{1}{2}\g^{22}\g_{33,2}&= &\cot \theta  \tag{1.2.12}
 \end{align*}
 
-for\(i,j=1,2,3\)
-\subsection{Ricci Tensor}
+对于\(i,j=1,2,3\)
+\subsection{Ricci张量}
 
 \[
 R_{\mu\nu}  = \Ricci{\mu}{\nu} \tag{1.3.1}
 \]
-\textbf{Non-Zero Components of Ricci Tensor:}
+\textbf{Ricci张量非零分量:}
 \begin{align*}
 R_{00}  &= \Ricci{0}{0}\\
         &= \csg{0}{00,0} -\csg{\sigma}{0\sigma,0}  +\csg{\sigma}{0\sigma} \csg{0}{00} - \csg{\sigma}{\sigma 0} \csg{\sigma}{0\sigma}\\ 
@@ -246,135 +226,131 @@ R_{11}  &= \Ricci{1}{1}\\
         &=\frac{1}{c^{2}}\frac{a\ddot{a}+2\dot{a}^{2}+2K}{1-Kr^{2}}\\
         &=\frac{1}{c^{2}}(\frac{\ddot{a}}{a}+2\frac{\dot{a}^{2}}{a^{2}}+2\frac{K}{a^{2}})\g_{11}\tag{1.3.3}\\
 \end{align*}
-\textbf{We can get the following equations by using the same principle:}
+\textbf{同理:}
 \begin{align*}
 R_{00}  &= -3\frac{\ddot{a}}{a}\tag{1.3.4}\\
 R_{ij}  &=\frac{1}{c^{2}}(\frac{\ddot{a}}{a}+2\frac{\dot{a}^{2}}{a^{2}}+2\frac{K}{a^{2}})\g_{ij}\tag{1.3.5}\\
 R &= \frac{6}{c^{2}}(\frac{\ddot{a}}{a}+\frac{\dot{a}^{2}}{a^{2}}+\frac{K}{a^{2}})\tag{1.3.6}
 \end{align*}
 
-\subsection{Friedmann Equation}
+\subsection{Friedmann方程}
 \quad\\
-\textbf{Einstein Field Equation:}
+\textbf{Einstein场方程:}
 \begin{align*}
 R_{\mu \nu}-\frac{1}{2}\g_{\mu \nu}R + \Lambda \g_{\mu \nu} = \frac{8\pi G}{c^{4}}T_{\mu \nu} \tag{1.4.1}
 \end{align*}
-\textbf{Energy-Momentum Tensor:}
+\textbf{能动张量:}
 \[
 T_{\mu\nu}=(\rho+\frac{p}{c^{2}})u_{\mu}u_{\nu}+p\g_{\mu\nu} \tag{1.4.2}
 \]
-\textbf{Cosmological Principle:}
+\textbf{根据宇宙学原理:}
 \[
 T_{\mu\nu}= diag\{\rho c^{2},p,p,p\} \tag{1.4.3}
 \]
-\textbf{According to the above equations:}
+\textbf{综上可得:}
 \begin{align*}
     (\frac{\dot{a}}{a})^{2}+\frac{Kc^{2}}{a^{2}}-&\frac{\Lambda c^{2}}{3}=\frac{8\pi G}{3}\rho\tag{1.4.4}\\
     2\frac{\ddot{a}}{a}+(\frac{\dot{a}}{a})^{2}+\frac{Kc^{2}}{a^{2}}&-\Lambda c^{2}=-\frac{8\pi G}{c^{2}}p \tag{1.4.5}
 \end{align*}
-\textbf{Define Hubble parameter:}
+\textbf{定义Hubble参数:}
 \[
 H = \frac{\dot{a}}{a}\tag{1.4.6}
 \]
-\textbf{Equation of State:}
+\textbf{状态方程:}
 \[
 p=w\rho c^{2} \tag{1.4.7}
 \]
-\textbf{Using 1.4.4 ,1.4.6 and 1.4.7 ,1.4.5 can be re-expressed as:}
+\textbf{根据 1.4.4 ,1.4.6 and 1.4.7,1.4.5可以写为:}
 \[
 \dot{\rho}+3(1+w)H\rho=0 \tag{1.4.8}
 \]
-\textbf{Which is Continuous Equation.}\\
-\textbf{Assume the expanding of universe is a Adiabatic Process, First Law of Thermodynamics:}
+\textbf{即为连续性方程.}\\
+\textbf{假设宇宙膨胀是一个绝热方程，根据热力学第一定律:}
 \[
 dE+pdV=0 \tag{1.4.9}
 \]
-\textbf{Where:}
+\textbf{这里:}
 \[
 E=(\rho_{m}+\rho_{r})V=\rho V,V \propto a^{3}\tag{1.4.10}
 \]
-\textbf{1.4.9 can be re-expressed as:}
+\textbf{1.4.9 可被表示为:}
 \[
 \derivo{}{t}(\rho a^{3})+p\derivo{}{t}(a^{3})=0\tag{1.4.11}
 \]
-\textbf{Particles of matter are non-relative,\(w_{m}=0\), while pressure p is mainly provided by radiation which means \(w_{r}=1/3\),so 1.4.8 can be re-expressed as:}\citep{CLSS1}
+\textbf{物质粒子是非相对论性的,\(w_{m}=0\)，压强$p$主要由辐射提供 \(w_{r}=1/3\),因此 1.4.8 可以被表示为:}\citep{CLSS1}
 \[
 \derivo{}{t}(\rho_{m} a^{3})+\frac{1}{a}\derivo{}{t}(\rho_{r}a^{4})=0\tag{1.4.12}
 \]
-\textbf{Assume matter is strictly conserved:}
+\textbf{假如物质是严格守恒的:}
 \[
 \derivo{}{t}(\rho_{m} a^{3})=0,\quad \frac{1}{a}\derivo{}{t}(\rho_{r}a^{4})=0\tag{1.4.13}
 \]
-\textbf{Which means:}
+\textbf{即:}
 \[
 \rho_{m} \propto a^{-3},\quad \rho_{r} \propto a^{-4}\tag{1.4.14}
 \]
-\textbf{Define Cosmological Critical Density:}
-\textbf{And 1.4.4 can be re-expressed as:}
+\textbf{则1.4.4 可以被表示为:}
 \[
 \frac{H^{2}}{H^{2}_{0}} = \Omega_{r,0}a^{-4}+\Omega_{m,0}a^{-3}+\Omega_{K,0}a^{-2}+\Omega_{\Lambda,0}\tag{1.4.15}
 \]
-\textbf{Where:}
+\textbf{其中:}
 \[
 \Omega_{r,0}=\frac{8\pi G\rho_{r0}}{3H^{2}_{0}},\quad \Omega_{m,0}=\frac{8\pi G\rho_{m0}}{3H^{2}_{0}},\quad \Omega_{K,0}=-\frac{K}{H^{2}_{0}a^{2}_{0}},\quad \Omega_{\Lambda,0}=\frac{\Lambda}{3H^{2}_{0}}\tag{1.4.16}
 \]
-\subsection{Cosmological Compositions Dominant Era:}
+\subsection{宇宙组分的主导时期:}
 
 \quad\\
-\textbf{Current Cosmological Parameters:}
+\textbf{当前宇宙参数:}
 \begin{align*}
     &\Omega_{m,0}=0.3,\quad \Omega_{\Lambda,0}=0.7,\quad \Omega_{r,0}=10^{-5}\\
     &H^{-1}_{0}=14Gyr,\quad a_{0}=1\tag{1.5.1}
 \end{align*}
-\quad\\
-\textbf{The evolution from Radiation Era to Matter Era:}
-\begin{align*}
-\Omega_{r,0}\displaystyle\frac{a^{-4}_{eq}}{a^{-4}_{0}}&=\Omega_{m,0}\displaystyle\frac{a^{-3}_{eq}}{a^{-3}_{0}}\tag{1.5.2}\\
-a_{eq}&=\frac{\Omega_{r,0}}{\Omega_{m,0}} \approx 2.80\times 10^{-4} \tag{1.5.3}\\
-z_{eq}&=\frac{a_{0}}{a_{eq}}-1 \approx 3.57 \times 10^{4}\tag{1.5.4}\\
-\end{align*}
-\begin{align*}
-  t_{eq}&=\frac{1}{H_{0}}\int^{\infty}_{z_{eq}}\displaystyle\frac{dz}{(1+z)E(z)^{1/2}}\\
-      &=\frac{1}{H_{0}}\int^{\infty}_{z_{eq}}\displaystyle\frac{dz}{(1+z)\sqrt{\Omega_{r,0}(1+z)^{4}+\Omega_{m,0}(1+z)^{3}+\Omega_{\Lambda,0}}}\\
-      &\approx 4.68\times 10^{4}yr  \tag{1.5.5}
-\end{align*}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{R2M_Eralog.png}
-\caption{\textbf{The evolution of matter density and radiation density over time}}
+\includegraphics[scale=1]{Era_rmL.png}
+\caption{\textbf{物质、辐射和暗能量密度(宇宙学参数)随时间的演化}}
 \end{figure}
 
-
-\textbf{The moment that universe began to expand in acceleration:}
+\quad\\
+\textbf{辐射主导时期到物质主导时期:}
+\begin{align*}
+&\Omega_{r,0}\displaystyle\frac{a^{-4}_{eq}}{a^{-4}_{0}}=\Omega_{m,0}\displaystyle\frac{a^{-3}_{eq}}{a^{-3}_{0}}\tag{1.5.2}\\
+&a_{eq}=\frac{\Omega_{r,0}}{\Omega_{m,0}} \approx 2.80\times 10^{-4} \tag{1.5.3}\\
+&z_{eq}=\frac{a_{0}}{a_{eq}}-1 \approx 3.57 \times 10^{4}\tag{1.5.4}\\
+  t_{eq}=\frac{1}{H_{0}}\int^{\infty}_{z_{eq}}&\displaystyle\frac{dz}{(1+z)E(z)^{1/2}}\\
+      =\frac{1}{H_{0}}\int^{\infty}_{z_{eq}}&\displaystyle\frac{dz}{(1+z)\sqrt{\Omega_{r,0}(1+z)^{4}+\Omega_{m,0}(1+z)^{3}+\Omega_{\Lambda,0}}}\\
+      \approx 4.68&\times 10^{4}yr  \tag{1.5.5}
+\end{align*}
+\textbf{宇宙开始加速膨胀的时刻:}
 
 \begin{align*}
-    q_{c}&=\frac{\Omega_{m}}{2}-\Omega_{\Lambda}\\
-    &=\frac{\Omega_{m,0}}{2}\frac{a^{-3}_{c}}{a^{-3}_{0}}-\Omega_{\Lambda,0}=0\tag{1.5.6}\\
+    q_{c}=\frac{\Omega_{m}}{2}&-\Omega_{\Lambda}
+    =\frac{\Omega_{m,0}}{2}\frac{a^{-3}_{c}}{a^{-3}_{0}}-\Omega_{\Lambda,0}=0\tag{1.5.6}\\
     a_{c}&=\displaystyle(\frac{\Omega_{m,0}}{2\Omega_{\Lambda}})^{1/3} \approx 0.598 \tag{1.5.7}\\
     z_{c}&=\frac{a_{0}}{a_{c}}-1\approx 0.671 \tag{1.5.8}\\
      t_{c}&=\frac{1}{H_{0}}\int^{\infty}_{z_{c}}\displaystyle\frac{dz}{(1+z)E(z)^{1/2}}\\
-      &\approx 96.8 \mathrm{G} yr\tag{1.5.9}
+      &\approx 7.54 \mathrm{G} yr\tag{1.5.9}
 \end{align*}
-\subsection{Big Bang Existence Criterion\cite{GRAIfPh1}}
+\subsection{大爆炸存在判据}
 \quad\\
-\textbf{Big Bang critical condition:}
+\textbf{大爆炸理论合理性的边界条件:}\cite{GRAIfPh1}
 \begin{align*}
 H^{2}&=H^{2}_{0}[\Omega_{\Lambda,0}+(1-\Omega_{m,0}-\Omega_{\Lambda,0})a^{-2}_{c}+\Omega_{m,0}a^{-3}_{c}]=0\tag{1.6.1}
 \end{align*}
-\textbf{Which can be re-express as:}
+\textbf{即为:}
 \[
 4(1-\Omega_{m,0}-\Omega_{\Lambda,0})+27\Omega_{m,0}^{2}\Omega_{\Lambda,0}=0\tag{1.6.2}
 \]
-\textbf{By introducing the following variable:}
+\textbf{引入以下变量代换:}
 \[
 x=\displaystyle(\frac{\Omega_{\Lambda,0}}{4\Omega_{m,0}})\tag{1.6.3}
 \]
-\textbf{1.6.2 equation quickly reduces to:}
+\textbf{1.6.2 可以化简为:}
 \[
 x^{3}-\frac{3}{4}x-\frac{1-\Omega_{m,0}}{\Omega_{m,0}}=0\tag{1.6.4}
 \]
 \quad\\
-\textbf{Assume that $\Omega_{\Lambda,0}>0$,we can get the following three cases:}
+\textbf{假设$\Omega_{\Lambda,0}>0$,我们可以得到方程1.6.3的以下三个解:}
 
 \begin{itemize}
     \item $0<\Omega_{m,0}\le \displaystyle\frac{1}{2}$\\
@@ -386,12 +362,10 @@ x^{3}-\frac{3}{4}x-\frac{1-\Omega_{m,0}}{\Omega_{m,0}}=0\tag{1.6.4}
 \end{itemize}
 
 
-
-\pagebreak
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{Universes.png}
-\caption{\textbf{FRLW Universe by different cosmological parameters}}
+\includegraphics[scale=0.85]{Universes.png}
+\caption{\textbf{FRLW宇宙，当前物质和暗能量密度关系决定了宇宙的特征和演化方向}}
 \end{figure}
 
 \pagebreak
