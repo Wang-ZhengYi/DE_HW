@@ -74,13 +74,13 @@ def Era(O_m0=0.3,O_L0=0.7,O_r0=8.4e-5,O_k0=0,a_0=1,h=0.68,Ns=2000):
 	ax1.legend(loc='best')
 	ax1.vlines(a_eqrm, np.log10(o_eqrm)-2,np.log10(o_eqrm)+2, linestyles ="dashed", colors ="k")
 	ax1.vlines(a_eqmL, np.log10(o_eqmL)-2,np.log10(o_eqmL)+2, linestyles ="dashed", colors ="k")
-	# ax1.text(a_eqrm,5,'Radiation-dominated',
-	# 	fontproperties='Times New Roman',
-	# 	fontsize=15,ha="right", va="top",
- #         bbox=dict(boxstyle="square",
- #                   ec=(0., 0., 1),
- #                   fc=(1., 1., 1.),
- #                   ))
+# 	ax1.text(a_eqrm,5,'Radiation-dominated',
+# 		fontproperties='Times New Roman',
+# 		fontsize=15,ha="right", va="top",
+#          bbox=dict(boxstyle="square",
+#                    ec=(0., 0., 1),
+#                    fc=(1., 1., 1.),
+#                    ))
 	# ax1.text(a_eqmL,5,'Matter-dominated',
 	# 	fontproperties='Times New Roman',
 	# 	fontsize=15,ha="right", va="top",
@@ -238,7 +238,8 @@ def cosmo_time(a_t=1,O_m0=0.3,O_L0=0.7,O_r0=8.4e-5,O_k0=0,a_0=1,h=0.68,nside=204
 	return t*9.78/h
 
 
-
+def LinGrow():
+    pass
 
 
 if __name__ == '__main__':
