@@ -10,10 +10,9 @@ matplotlib.rcParams['mathtext.fontset'] = 'cm'
 
 def main():
 	# a2tEuler()
-	# Era()
+	Era()
 	Universes()
-	# tt = cosmo_time(a_t=(Omg.m0/Omg.L0/2)**(1/3))
-	# print(tt)
+	plot_Growth()
 class Omg(object):
 	m0 = 0.3
 	L0 = 0.7
@@ -238,9 +237,65 @@ def cosmo_time(a_t=1,O_m0=0.3,O_L0=0.7,O_r0=8.4e-5,O_k0=0,a_0=1,h=0.68,nside=204
 	return t*9.78/h
 
 
-def LinGrow():
-    pass
 
+def Growth(w0=-1,dwda=0,om0=0.3,oL0=0.7):
+    size=1000
+    h=1/size
+    a = np.linspace(1e-7,1,size)
+    w = w0+dwda*a
+    X = om0*a**(3*w0)*np.exp(-3*dwda*(1-a))/oL0
+    A = (1.5*(w/(1+X))-3.5)/a
+    B = -1.5*((1-w)/(1+X))/a**2
+    dGda0 = 0
+    G0 = 1
+    dGda = np.zeros(len(a))
+    G = np.zeros(len(a))
+    dGda[0]=dGda0
+    G[0] = G0
+    for im in range(1,len(a)):
+        dGda[im] = dGda[im-1] + h*(A[im-1]*dGda[im-1]+B[im-1]*G[im-1])
+        G[im] = G[im-1] + dGda[im-1]*h
+    return G
+
+
+def plot_Growth():
+    plt.rcParams['xtick.direction'] = 'in'
+	plt.rcParams['ytick.direction'] = 'in'
+	fig, ax = plt.subplots(1,2, figsize = (12,12))
+    
+    Ga = Growth()
+    a = np.linspace(1e-7,1,len(Ga))
+    dwdas= [0,-0.3,0.3]
+    w0s  = [-0.8]
+    ax[0].plot(a,Ga,color='k',label=r'$(w_{0},w^{\prime})=(%1.1f,%1.1f)$'%(0,-1))
+    for w00 in w0s:
+        for dwda0 in dwdas:
+            Ga = Growth(w0=w00,dwda=dwda0)
+            ax[0].plot(a,Ga,color=randomcolor(),label=r'$(%1.1f,%1.1f)$'%(w00,dwda0))
+    ax[0].set_xlim(0,1)
+    ax[0].set_ylim(0.5,1)
+    ax[0].set_xlabel(r'$a$',fontsize=20)
+    ax[0].set_ylabel('Growth'+r'$\ \delta/a$',fontsize=20)
+    ax[0].legend(loc='best')
+    ax[1].plot(a,Ga/Ga[-1],color='k',label=r'$(w_{0},w^{\prime})=(%1.1f,%1.1f)$'%(0,-1))
+    for w00 in w0s:
+        for dwda0 in dwdas:
+            Ga = Growth(w0=w00,dwda=dwda0)
+            ax[1].plot(a,Ga/Ga[-1],color=randomcolor(),label=r'$(%1.1f,%1.1f)$'%(w00,dwda0))
+    ax[1].set_xlim(0,1)
+    ax[1].set_ylim(1,2)
+    ax[1].legend(loc='best')
+    ax[1].set_xlabel(r'$a$',fontsize=20)
+    ax[1].set_ylabel('Growth'+r'$\ (\delta/a)/(\delta/a)_{z=0}$',fontsize=20)
+    fig1.tight_layout()
+    fig.savefig('Ga.png',dpi=1200)
+    plt.clf()
+def randomcolor():
+    colorArr = ['1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
+    color = ""
+    for i in range(6):
+        color += colorArr[np.random.randint(0,14)]
+    return "#"+color
 
 if __name__ == '__main__':
 	main()
