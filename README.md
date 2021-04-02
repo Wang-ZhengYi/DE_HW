@@ -1,5 +1,5 @@
 # DE_HW
-Dark Energy Assignments
+[Dark Energy Assignments](DE.pdf)
 ## Universes
 ![avatar](Universes.png)
 ## Eras
